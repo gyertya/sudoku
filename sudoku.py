@@ -107,18 +107,18 @@ def modify_element(change):
         time.sleep(3)
 
 
-def save_to_file():
+def save_to_file(name, elements_to_save, puzzle_number, original_time=None):
     # username, check duplicates, save elements, start time, score(?) to file
+    # file format: NAME|elements|time|original_puzzle_NR
+    # András úr
     pass
 
 
-def new_table():
-    # need a txt, where every sudoku is a line
-    pass
-
-
-def score_board():
-    # username, time, score to file
+def create_puzzle(new_puzzle=True):
+    # one file, where puzzles are stored. if new_puzzle -> read one line, create new game.
+    # if load -> load from file
+    # output: puzzle_NR, original_time
+    # Gyertya úr
     pass
 
 
@@ -165,7 +165,11 @@ print_table()
 
 while steps_left() != 0:
     new_tip = input_new_element()
-    if small_check(new_tip) and row_colomn_check(new_tip):
+    if new_tip.upper() == 'SAVE':
+        user = input("What is your name?")
+        save_to_file(user, elements, puzzle_number, start_time)
+        break
+    elif small_check(new_tip) and row_colomn_check(new_tip):
         modify_element(new_tip)
     else:
         print('Something not okay...')
