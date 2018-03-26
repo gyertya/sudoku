@@ -107,6 +107,21 @@ def modify_element(change):
         time.sleep(3)
 
 
+def save_to_file():
+    # username, check duplicates, save elements, start time, score(?) to file
+    pass
+
+
+def new_table():
+    # need a txt, where every sudoku is a line
+    pass
+
+
+def score_board():
+    # username, time, score to file
+    pass
+
+
 def steps_left():
     x = 0
     for i in range(0, 9):
