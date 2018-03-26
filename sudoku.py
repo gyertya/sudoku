@@ -3,7 +3,7 @@ import sys
 import copy
 import os
 
-def print_table():
+def print_table(): # ez printeli ki a tablat
     os.system('clear')
     print("     ", end='')
     for i in range(0,9):
